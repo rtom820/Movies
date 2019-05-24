@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Movie</th>
+        <th scope="col">Avg. Rating</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let movie of listOfMovies">
+        <th>{{movie.name}}</th>
+        <td>{{movie.avg.toFixed(2)}}</td>
+        <td>
+          <button type="button" class="btn btn-info" (click) = "onShow(movie)">Show Details</button>
+          <button type="button" class="btn btn-info" (click) = "onEdit(movie)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <app-new></app-new>
